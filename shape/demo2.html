@@ -1,0 +1,38 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 80px;
+            height: 40px;
+            transform: skewX(-45deg);
+            background: yellow;
+        }
+        .wrap>div{
+            transform: skewX(45deg); 
+        }
+        .btn{
+            position: relative;
+            padding: 10px;
+        }
+        .btn:before{
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            z-index: -1;
+            background: #85a;
+            transform: skewX(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div>内部内容</div>
+    </div>
+    <a class="btn" >第二个</a>
+</body>
+</html>
