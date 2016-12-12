@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            background: url("../img/cat.png") no-repeat;
+            background-size: cover;
+        }
+        .wrap{
+            position: relative;
+            width: 500px;
+            margin: 0px auto;
+            padding: 10px;
+            line-height: 1.5;
+            background: hsla(0, 0%, 100%, .3);
+            overflow: hidden;
+        }
+        .wrap::before{
+            content: '';
+            background: url("../img/cat.png") 0/cover fixed;
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            filter: blur(20px);
+            z-index: -1;
+            margin: -30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        个人觉得这些汉字应该要存在某个”汉字库”里面,从汉字库里随机抽取汉字堆叠生成一段假文.于是我决定做一个”字库”,存放一个数量级的没有重复的汉字.那么在做生成器之前还要做一个字库存储器.突然觉得别看是一个小东西,但是真正实现起来还着实麻烦呢!
+注意:我在这里其实犯了一个错,并且现在才恍然大悟.那么我将会在揭示伏笔的时候一起道出这个让我南辕北辙并且现在还没有实现的功能吧.
+    </div>
+</body>
+</html>
