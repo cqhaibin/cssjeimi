@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .wrap1{
+            width: 200px;
+            height: 120px;
+            overflow: hidden;
+        }
+        .wrap1 > img{
+            max-height: 100%;
+            max-width: 100%;
+            -webkit-filter: sepia(1) saturate(4) hue-rotate(150deg);
+        }
+
+        .wrap2{
+            width: 200px;
+            height: 120px;
+            background: hsl(335, 100%, 50%);
+            overflow: hidden;
+        }
+        .wrap2 > img{
+            height: 100%;
+            width: 100%;
+            mix-blend-mode: luminosity;
+        }
+
+        .wrap3{
+            width: 200px;
+            height: 120px;
+            background-size: cover;
+            background-color: hsl(335, 100%, 50%);
+            background-image: url("../img/cat.png"); 
+            background-blend-mode: luminosity;
+        } 
+    </style>
+</head>
+<body>
+    <div class="wrap1">
+        <img src="../img/cat.png" alt="">
+    </div>
+
+    <div class="wrap2">
+        <img src="../img/cat.png" alt="">
+    </div>
+
+    <div class="wrap3"> 
+    </div>
+</body>
+</html>

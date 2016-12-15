@@ -2,8 +2,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+        .wrap{
+            position: relative;
+            display: inline-block;
+            padding: .5em 1em .35em;
+            color: white;
+        }
+        .wrap + .wrap{
+            margin-left: -8px;
+        }
+        .wrap:before{
+            position: absolute;
+            content: '';
+            top:0px; right: 0px; left: 0px; bottom: 0px;
+            z-index: -1;
+            background: #58a;
+            transform: perspective(.5em) rotateX(5deg);
+            transform-origin: bottom;
+            border-radius: .5em .5em 0 0;
+            box-shadow: 0 .15em white inset;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="wrap">wrap</div>
+    <div class="wrap">wrap</div>
+    <div class="wrap">wrap</div>
 </body>
 </html>
