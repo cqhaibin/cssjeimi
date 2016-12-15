@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        dt, dd{
+            display: inline;
+        }
+        dd{
+            font-weight: bold; 
+            margin: 0px 0px 0px 5px;
+        }
+        dd + dt::before{
+            content: '\A';
+            white-space: pre; /*html默认换行符与其相邻的其他空白符合并,pre表示不合并空白符*/
+        }
+        dd + dd::before{
+            content: ',';
+            margin-left: -5px;
+        }
+    </style>
+</head>
+<body> 
+    <dt>Name</dt><dd>Sam Long</dd>  
+    <dt>Email</dt><dd>abc@163.com</dd><dd>bcd@163.com</dd> 
+    <dt>Location</dt><dd>CQ</dd> 
+</body>
+</html>
