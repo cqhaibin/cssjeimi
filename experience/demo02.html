@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        input[type="checkbox"]{
+            display: none;    
+        }
+        input[type="checkbox"] + label::before{
+            content: '\a0'; /*不换行空格*/
+            display: inline-block;
+            background: silver;
+            border-radius: .2em;
+            margin-right: .2em;
+            width: .8em;
+            height: .8em; 
+            line-height: .65em;
+            text-indent: .15em;
+        }
+        input[type="checkbox"]:checked + label::before{
+            content: '\2713';
+            background: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="anesome"/>
+    <label for="anesome">anesome</label>
+</body>
+</html>
