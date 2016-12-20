@@ -1,0 +1,48 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .wrap{
+            overflow: auto;
+            width: 10em;
+            height: 8em;
+            padding: .3em .5em;
+            border: 1px solid silver;
+
+            background: linear-gradient(white 30%, transparent), radial-gradient(at 50% 0, rgba(0, 0, 0, .2),transparent 70%);
+            background-repeat: no-repeat;
+            background-size: 100% 50px, 100% 15px;
+            background-attachment: local, scroll;
+        }
+        .radi{
+            background: -webkit-radial-gradient(40% 37%, closest-corner, red, grey);
+            width: 200px;
+            height: 100px;
+        }
+        .radi02{
+            margin-top: 10px;
+            background: -webkit-radial-gradient(40% 37%, farthest-corner, red, grey);
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="wrap" >
+        <li>Ada Catlace</li>
+        <li>Alan Purring</li>
+        <li>Schrödingcat</li>
+        <li>Tim Purrners-Lee</li>
+        <li>WebKitty</li>
+        <li>Json</li>
+        <li>Void</li>
+        <li>Neko</li>
+        <li>NaN</li>
+        <li>Cat5</li>
+        <li>Vector</li>
+    </ul>
+    <div class="radi"></div>
+    <div class="radi02"></div>
+</body>
+</html>
