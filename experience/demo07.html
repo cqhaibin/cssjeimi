@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .wrap{
+            position: relative;
+            display: inline-block;
+        }
+        .wrap > div{
+            position: absolute;
+            top: 0; bottom: 0; left: 0;
+            width: 50%;
+            resize: horizontal;
+            overflow: hidden;  
+        }
+        .wrap > div::after{
+            position: absolute;
+            content: '';
+            bottom: 0; right: 0;
+            width: 12px;
+            height: 12px;
+            cursor: ew-resize;
+            padding: 5px;
+            background: linear-gradient(-45deg,white 50%, transparent 0);
+            background-clip: content-box;
+        }
+        .wrap img{
+            display: block;
+            user-select: none;
+        } 
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div>
+            <img src="../img/cat-alpha.png" alt="">
+        </div>
+        <img src="../img/cat.png" alt="">
+    </div>  
+</body>
+</html>
