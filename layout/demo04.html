@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 200px;
+        }
+        .wrap p:nth-child(2), .wrap p:nth-child(4){ /*从第一个元素开始计数*/
+            background: red;
+        }
+        .wrap p:nth-of-type(1), .wrap p:nth-of-type(2){ /*从第一个p元素开始计数*/
+            color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>标题数据</h1>
+        <p>第一行内容(第一个P标签)</p>
+        <span>这是一个span</span>
+        <p>第二行内容(第二个P标签)</p>
+    </div>
+</body>
+</html>
