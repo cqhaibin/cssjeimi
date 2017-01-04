@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        input:not(:focus) + .callout{
+            transform: scale(0);
+        }
+        .callout{
+            transition: .5s transform;
+            transform-origin: 1.4em -0.4em;
+        }
+        input{
+            display: block;
+        }
+        .callout{
+            position: absolute;
+            max-width: 14em;
+            background: #fed;
+            padding: .6em, .8em;
+        }
+    </style>
+</head>
+<body>
+    <label>
+        Your name:
+        <input type="text" id="username" />
+        <span class="callout">Only letters,number,underscores and hyphens allowed</span>
+    </label>
+</body>
+</html>

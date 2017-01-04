@@ -1,0 +1,43 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @keyframes elastic-grow{
+            from{ transform: scale(0); }
+            70%{ 
+                transform: scale(1.1);
+                animation-timing-function: cubic-bezier(.1,.25,1,.25); /*反向ease*/
+             }
+        }
+        input:not(:focus) + .callout{
+            transform: scale(0);
+            animation-timing-function: ease; /*解决ease动画后定位的问题*/
+            transition-duration: .25s; /*覆盖默认的.5s时间*/
+        }
+        input:focus + .callout{
+            animation: elastic-grow .5s;
+        }
+        .callout{
+            transform-origin: 1.4em, .4em;
+            transition: .5s cubic-bezier(.25,.1,.3,1.5); /*光标输出input时，有动画*/
+        }
+        input{
+            display: block;
+        }
+        .callout{
+            position: absolute;
+            max-width: 14em;
+            background: #fed;
+            padding: .6em, .8em;
+        }
+    </style>
+</head>
+<body>
+    <label>
+        Your name:
+        <input type="text" id="username" />
+        <span class="callout">Only letters,number,underscores and hyphens allowed</span>
+    </label>
+</body>
+</html>
