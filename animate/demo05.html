@@ -1,0 +1,66 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @keyframes goHome{
+            from{ transform: translateY(-100px); } 
+
+        }
+        .wrap ul{
+            list-style: none;
+        }
+        
+        .wrap ul li {
+            float: left; 
+            background: red;
+            width: 20px;
+            height: 20px;
+        }
+        .wrap ul li:first-child { 
+            animation: goHome .3s; 
+        }
+        .wrap ul li:nth-child(2){
+            animation: goHome .4s;
+        }
+        .wrap ul li:nth-child(3){
+            animation: goHome .5s;
+        }
+        .wrap ul li:nth-child(4){
+            animation: goHome .6s;
+        }
+        .wrap ul li:nth-child(5){
+            animation: goHome .7s;
+        }
+        .wrap ul li:nth-child(6){
+            animation: goHome .8s;
+        }
+        .wrap ul li:nth-child(7){
+            animation: goHome .9s;
+        }
+        .wrap ul li:last-child{
+            animation: goHome 1s;
+        }
+    </style>
+</head>
+<body>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="wrap">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul>
+    </div>
+</body>
+</html>

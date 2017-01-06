@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @keyframes typing {
+            from{ width: 0; }
+        }
+        @keyframes cart{
+            50%{ border-color: currentColor; } /*利用steps在关键帧位置发生动画实现*/
+        }
+        .wrap{
+            width: 14ch;
+            animation: typing 8s steps(14) , cart 1s steps(1) infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right:1px solid transparent;
+            font-family: Courier New, Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">Css is awesome</div>
+</body>
+</html>

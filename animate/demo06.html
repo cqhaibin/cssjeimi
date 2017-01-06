@@ -1,0 +1,21 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @keyframes loader{
+            to{ background-position: -128px 0; }
+        }
+        .wrap{
+            background: url("../img/frameAnimate.png") no-repeat;
+            width: 32px;
+            height: 50px; 
+            background-position: 0px 0px;
+	        animation: loader 1s infinite steps(4);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap"></div>
+</body>
+</html>
