@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*反向旋转必须有，不然位置不对*/
+        @keyframes spinc{
+            from{
+                transform: translate(50%, 150px)
+                            rotate(0turn)
+                            translate(-50%, -150px) 
+                            translate(50%, 50%)
+                            rotate(1turn)
+                            translate(-50%, -50%); /*前三个第一轮旋转，后三个第二轮旋转*/
+            }
+            to{
+                transform: translate(50%, 150px)
+                            rotate(1turn)
+                            translate(-50%, -150px)
+                            translate(50%, 50%) 
+                            rotate(0turn)
+                            translate(-50%, -50%);
+            }
+        }
+        .wrap{
+            width: 300px;
+            height: 300px;
+            background: yellow;
+            border-radius: 50%;
+            overflow: hidden;
+            padding: 20px; /*加大窗口的宽和高，利用背景从边框开始的原理，让运动图片与边框有一定的距离*/
+        } 
+        .avatar{            
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0px auto; /*运行元素居中*/
+            display: block;   
+            animation: spinc 5s linear infinite; 
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap"> 
+        <img src="../img/cat.png" alt="" class="avatar" /> 
+    </div>
+</body>
+</html>

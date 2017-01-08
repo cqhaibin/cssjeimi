@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>他们旋转的是元素整个坐标系</title>
+    <style>
+        body{
+            padding-top: 0px;
+        }
+        .wrap{
+            width: 40px;
+            height: 40px;
+            background: lightseagreen;
+            transform: rotate(35deg); /*旋转元素整个坐标系*/
+            transform-origin: 100px 50px; /*在坐标系中定位，坐标系统原点为元素的左上角*/
+        }
+        .zone{
+            position: absolute;
+            background: red;
+            width: 2px;
+            height: 2px;
+            left: 100px;
+            top: 50px;  
+            padding: 0px;
+            margin: 0px;
+        }
+        .translateT{            
+            width: 40px;
+            height: 40px;
+            background: red;
+            transform: translate(50%,50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap"></div>
+    <dir class="zone"></dir>
+    <div class="translateT"></div>
+</body>
+</html>

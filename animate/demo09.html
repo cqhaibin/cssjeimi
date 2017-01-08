@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @keyframes mic{
+            to{ background-position: 100% 0; }    
+        }
+        .wrap{
+            background: url("../img/cat.png");
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            width: 100px;
+            height: 200px;
+            animation: mic 5s linear infinite alternate; /*直线运动，永不停止，偶数反向运动*/
+            animation-play-state: paused;
+        }
+        .wrap:hover, .wrap:active{
+            animation-play-state: running;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap"></div>
+</body>
+</html>
